@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
+  "name": "1b03b9513de25e1be2e3",
+  "position": {
+    "x": 52.52279635258359,
+    "y": 417.26443768996961,
+    "z": 2,
+    "height": 265.53191489361706,
+    "width": 383.22188449848028,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "pieChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "encounter"
+                    }
+                  },
+                  "Property": "age_bucket"
+                }
+              },
+              "queryRef": "encounter.age_bucket",
+              "nativeQueryRef": "age_bucket",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "encounter"
+                    }
+                  },
+                  "Property": "m_#encounters"
+                }
+              },
+              "queryRef": "encounter.m_#encounters",
+              "nativeQueryRef": "m_#encounters"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "encounter"
+                  }
+                },
+                "Property": "m_#encounters"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
