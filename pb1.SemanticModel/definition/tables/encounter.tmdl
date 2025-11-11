@@ -5,11 +5,6 @@ table encounter
 		formatString: 0
 		lineageTag: 80580696-8a7c-4797-b8cf-abc049a9001a
 
-	measure m_DCI = SUM(encounter[total_direct_cost])/SUM(encounter[expected_cost])
-		lineageTag: 4c28bda3-51d4-43bc-88f6-e7b99289182c
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column encounter_key
 		dataType: string
 		sourceProviderType: nvarchar(2048)
